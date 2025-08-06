@@ -16,7 +16,7 @@ class ChatCompletionRequest(BaseModel):
     stream: Optional[bool] = Field(default=False, description="Stream the response")
     stop: Optional[Union[str, List[str]]] = Field(default=None, description="Stop sequences")
 
-class Usage(BaseModel):
+class ChatUsage(BaseModel):
     prompt_tokens: int
     completion_tokens: int
     total_tokens: int
@@ -32,7 +32,7 @@ class ChatCompletionResponse(BaseModel):
     created: int = Field(default_factory=lambda: int(datetime.now().timestamp()))
     model: str
     choices: List[Choice]
-    usage: Usage
+    usage: ChatUsage
 
 class ModelInfo(BaseModel):
     id: str
