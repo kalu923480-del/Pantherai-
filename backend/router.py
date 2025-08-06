@@ -5,7 +5,7 @@ import json
 import uuid
 from datetime import datetime
 import os
-from models import ChatCompletionRequest, ChatCompletionResponse, Usage as UsageModel, Choice, ChatMessage
+from models import ChatCompletionRequest, ChatCompletionResponse, Usage as UsageModel, Choice, ChatMessage, ChatUsage
 
 class ModelRouter:
     def __init__(self, db_manager):
